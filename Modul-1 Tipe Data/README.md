@@ -207,7 +207,7 @@ int main() {
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Code di atas adalah sebuah program C++ sederhana yang menghitung keliling persegi dan volume kubus berdasarkan pilihan menu yang dimasukkan oleh pengguna. Program ini memiliki fungsi hitungKelilingPersegi untuk menghitung keliling persegi dan fungsi hitungVolumeKubus untuk menghitung volume kubus. Program ini terlebih dahulu akan menampilkan menu pilihan kepada pengguna untuk memilih apakah ingin menghitung keliling persegi atau volume kubus. Setelah pengguna memasukkan pilihan menu, program akan meminta input yang sesuai dan kemudian melakukan perhitungan berdasarkan pilihan pengguna. Jika pengguna memilih untuk menghitung keliling persegi, program akan meminta input panjang sisi persegi, kemudian menghitung dan menampilkan keliling persegi. Sedangkan jika pengguna memilih untuk menghitung volume kubus, program akan meminta input sisi kubus, kemudian menghitung dan menampilkan volume kubus. Jika pengguna memasukkan pilihan menu yang tidak valid, program akan menampilkan pesan "Menu Tidak Ada". Pada kode di atas, menggunakan cout untuk mencetak atau menampilkan output ke layar. 
 
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
 
@@ -281,7 +281,9 @@ int main() {
 ```
 #### output
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Code di atas merupakan program C++ yang menunjukkan perbedaan antara penggunaan struct dan class dalam pemrograman. Program ini mendefinisikan sebuah struct MahasiswaStruct dan sebuah class MahasiswaClass yang memiliki properti nama, umur, dan IPK (Indeks Prestasi Kumulatif). Pertama, program menggunakan struct MahasiswaStruct untuk membuat objek mhsStruct yang merepresentasikan seorang mahasiswa. Kemudian, program menginisialisasi nilai nama, umur, dan IPK dari objek tersebut. Selanjutnya, program menampilkan informasi mahasiswa tersebut menggunakan nilai yang disimpan dalam objek struct. Kemudian, program menggunakan class MahasiswaClass untuk membuat objek mhsClass yang juga merepresentasikan seorang mahasiswa. Class MahasiswaClass memiliki properti nama, umur, dan IPK sebagai variabel private, serta memiliki constructor untuk menginisialisasi nilai-nilai tersebut. Terdapat juga metode display() yang digunakan untuk menampilkan informasi mahasiswa. Setelah objek mhsClass dibuat dan diinisialisasi dengan nilai tertentu, program menampilkan informasi mahasiswa tersebut dengan memanggil metode display() dari objek mhsClass. Pada kode di atas, menggunakan cout untuk mencetak atau menampilkan output ke layar. 
+
+Dengan demikian, program ini memperlihatkan perbedaan antara penggunaan struct dan class dalam pemrograman C++, di mana struct digunakan untuk menyimpan data tanpa metode atau fungsi tambahan, sedangkan class digunakan untuk menyimpan data beserta metode atau fungsi yang terkait dengan data tersebut.
 
 ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
 
@@ -308,7 +310,15 @@ int main() {
 ```
 #### output
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Code di atas merupakan program C++ yang menggunakan library map untuk menyimpan data mahasiswa berupa nama dan nilai. Program ini kemudian memasukkan data mahasiswa ke dalam map nilaiMahasiswa dan menampilkan nilai mahasiswa tersebut ke layar. menggunakan function cout untuk mengeksekusi nya. berikut penjelasan lebih rincinya : 
+1. Mendefinisikan map nilaiMahasiswa yang menggunakan key berupa std::string (nama mahasiswa) dan value berupa int (nilai mahasiswa).
+2. Memasukkan data mahasiswa ke dalam map nilaiMahasiswa dengan key berupa nama mahasiswa dan value berupa nilai mahasiswa. Dalam contoh ini, data yang dimasukkan adalah:
+"Alice" dengan nilai 85, "Bob" dengan nilai 70, "Charlie" dengan nilai 92
+3. Melakukan iterasi melalui map nilaiMahasiswa menggunakan iterator it. Iterator it digunakan untuk mengakses elemen-elemen map, yang memiliki dua bagian: first (key) dan second (value). Program mencetak nama mahasiswa beserta nilainya ke layar menggunakan std::cout.
+4.  Mengakhiri program dengan mengembalikan nilai 0.
+
+#### Kesimpulan kode diatas
+Dengan menggunakan map, program dapat menyimpan data mahasiswa secara terstruktur dengan pasangan key-value. Kemudian, program menggunakan loop untuk menampilkan nilai mahasiswa yang disimpan dalam map ke layar. Dengan demikian, program ini memanfaatkan fitur map untuk menyimpan dan mengakses data mahasiswa dengan efisien.
 
 #### Perbedaan array dengan map
 
