@@ -205,7 +205,7 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot (529)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/d0f36238-8e9b-4060-ab79-6390decc798d)
 
 Code di atas adalah sebuah program C++ sederhana yang menghitung keliling persegi dan volume kubus berdasarkan pilihan menu yang dimasukkan oleh pengguna. Program ini memiliki fungsi hitungKelilingPersegi untuk menghitung keliling persegi dan fungsi hitungVolumeKubus untuk menghitung volume kubus. Program ini terlebih dahulu akan menampilkan menu pilihan kepada pengguna untuk memilih apakah ingin menghitung keliling persegi atau volume kubus. Setelah pengguna memasukkan pilihan menu, program akan meminta input yang sesuai dan kemudian melakukan perhitungan berdasarkan pilihan pengguna. Jika pengguna memilih untuk menghitung keliling persegi, program akan meminta input panjang sisi persegi, kemudian menghitung dan menampilkan keliling persegi. Sedangkan jika pengguna memilih untuk menghitung volume kubus, program akan meminta input sisi kubus, kemudian menghitung dan menampilkan volume kubus. Jika pengguna memasukkan pilihan menu yang tidak valid, program akan menampilkan pesan "Menu Tidak Ada". Pada kode di atas, menggunakan cout untuk mencetak atau menampilkan output ke layar. 
 
