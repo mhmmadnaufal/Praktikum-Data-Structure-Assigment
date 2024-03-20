@@ -281,6 +281,8 @@ int main() {
 ```
 #### output
 
+![Screenshot (530)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/18028eb2-ad3f-4417-a4aa-2744550c12ce)
+
 Code di atas merupakan program C++ yang menunjukkan perbedaan antara penggunaan struct dan class dalam pemrograman. Program ini mendefinisikan sebuah struct MahasiswaStruct dan sebuah class MahasiswaClass yang memiliki properti nama, umur, dan IPK (Indeks Prestasi Kumulatif). Pertama, program menggunakan struct MahasiswaStruct untuk membuat objek mhsStruct yang merepresentasikan seorang mahasiswa. Kemudian, program menginisialisasi nilai nama, umur, dan IPK dari objek tersebut. Selanjutnya, program menampilkan informasi mahasiswa tersebut menggunakan nilai yang disimpan dalam objek struct. Kemudian, program menggunakan class MahasiswaClass untuk membuat objek mhsClass yang juga merepresentasikan seorang mahasiswa. Class MahasiswaClass memiliki properti nama, umur, dan IPK sebagai variabel private, serta memiliki constructor untuk menginisialisasi nilai-nilai tersebut. Terdapat juga metode display() yang digunakan untuk menampilkan informasi mahasiswa. Setelah objek mhsClass dibuat dan diinisialisasi dengan nilai tertentu, program menampilkan informasi mahasiswa tersebut dengan memanggil metode display() dari objek mhsClass. Pada kode di atas, menggunakan cout untuk mencetak atau menampilkan output ke layar. 
 
 Dengan demikian, program ini memperlihatkan perbedaan antara penggunaan struct dan class dalam pemrograman C++, di mana struct digunakan untuk menyimpan data tanpa metode atau fungsi tambahan, sedangkan class digunakan untuk menyimpan data beserta metode atau fungsi yang terkait dengan data tersebut.
