@@ -311,7 +311,7 @@ int main() {
 }
 ```
 #### output
-
+![Screenshot (531)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/bd4c6e88-c332-4657-ae30-729572d69b9a)
 Code di atas merupakan program C++ yang menggunakan library map untuk menyimpan data mahasiswa berupa nama dan nilai. Program ini kemudian memasukkan data mahasiswa ke dalam map nilaiMahasiswa dan menampilkan nilai mahasiswa tersebut ke layar. menggunakan function cout untuk mengeksekusi nya. berikut penjelasan lebih rincinya : 
 1. Mendefinisikan map nilaiMahasiswa yang menggunakan key berupa std::string (nama mahasiswa) dan value berupa int (nilai mahasiswa).
 2. Memasukkan data mahasiswa ke dalam map nilaiMahasiswa dengan key berupa nama mahasiswa dan value berupa nilai mahasiswa. Dalam contoh ini, data yang dimasukkan adalah:
