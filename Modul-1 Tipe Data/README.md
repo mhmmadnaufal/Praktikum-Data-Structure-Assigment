@@ -1,5 +1,5 @@
 # <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
-<p align="center">Muhammad Naufal</p>
+<p align="center">Muhammad Naufal | 2311110034</p>
 
 ## Dasar Teori
 
