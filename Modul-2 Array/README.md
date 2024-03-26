@@ -107,6 +107,8 @@ int main()
 ```
 #### Output
 
+![Screenshot (562)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/85727ed3-13d7-4ca8-94eb-61be0bba6827)
+
 Codingan di atas merupakan program untuk menginputkan dan menampilkan array 3 dimensi berukuran 2x3x3. Pertama, program mendeklarasikan array arr dengan ukuran 2x3x3. Selanjutnya, program meminta pengguna untuk memasukkan nilai elemen-elemen array tersebut dengan menggunakan tiga nested loop untuk mengakses setiap elemen array sesuai dengan dimensinya. Pengguna diminta untuk memasukkan nilai dari setiap elemen array dengan format "Array[x][y][z] = nilai".
 
 Setelah selesai menginputkan nilai elemen array, program akan menampilkan isi array 3 dimensi tersebut ke layar. Program menggunakan nested loop kembali untuk melakukan iterasi dan mencetak nilai setiap elemen array ke layar dengan format yang sesuai. Dengan demikian, program tersebut memungkinkan pengguna untuk menginputkan dan melihat isi dari array 3 dimensi berukuran 2x3x3 secara sistematis dan terstruktur. 
@@ -152,6 +154,9 @@ int main(){
 ```
 #### Output
 
+![Screenshot (563)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/1fb2833f-5f4c-4136-a394-41daa5640e52)
+
+
 Codingan di atas merupakan program sederhana yang bertujuan untuk mencari nilai maksimum dari array yang diinputkan oleh pengguna. Pertama, program akan meminta pengguna untuk memasukkan panjang array, kemudian meminta pengguna untuk memasukkan nilai-nilai array tersebut. Selanjutnya, program akan melakukan iterasi pada setiap elemen array untuk mencari nilai maksimum. Proses pencarian nilai maksimum dilakukan dengan membandingkan setiap elemen array dengan nilai maksimum sementara yang disimpan dalam variabel 'maks'. Jika nilai elemen array lebih besar dari nilai maksimum sementara, maka nilai maksimum sementara akan diperbarui bersama dengan indeksnya yang disimpan dalam variabel 'lokasi'.
 
 Setelah selesai melakukan iterasi, program akan mencetak nilai maksimum beserta indeksnya ke layar. Jika panjang array yang diinputkan oleh pengguna kurang dari atau sama dengan 0, program akan mencetak pesan kesalahan dan mengembalikan nilai 1 untuk menandakan adanya kesalahan. Namun, jika panjang array valid dan proses pencarian nilai maksimum selesai tanpa masalah, program akan mengembalikan nilai 0 untuk menandakan bahwa eksekusi program telah berhasil. Dengan demikian, program tersebut memberikan pengguna informasi mengenai nilai maksimum dari array yang telah diinputkan serta lokasi indeks dari nilai maksimum tersebut.
@@ -159,6 +164,9 @@ Setelah selesai melakukan iterasi, program akan mencetak nilai maksimum beserta 
 ## Unguided 
 
 ### 1. Buatlah program untuk menampilkan output seperti berikut dengan data yang diinputkan oleh user!
+
+![Screenshot (561)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/ec13f030-e35d-479a-8d8e-be4159ee47df)
+
 
 ```C++
 
@@ -230,6 +238,10 @@ int main()
 ```
 #### output
 
+![Screenshot (565)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/47f56684-6dc6-4b92-b489-f3a1bd257172) <br>
+
+![Screenshot (566)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/8253c701-73de-44a6-94cc-b7ec64fb434f)
+
 Hasil output program tersebut menunjukkan proses penginputan dan penampilan data dari array tiga dimensi yang telah diisi oleh pengguna. Pengguna diminta untuk memasukkan jumlah baris, kolom, dan layer array, kemudian memasukkan nilai-nilai elemen array sesuai dengan indeksnya. Setelah semua nilai diinputkan, program menampilkan data array dengan format "Data Array[i][j][k] = nilai" yang mencakup semua nilai yang telah dimasukkan sebelumnya.
 
 Selain itu, program juga menampilkan seluruh elemen array dalam format matriks tiga dimensi, di mana setiap baris mewakili satu layer dari array tiga dimensi. Dengan demikian, pengguna dapat melihat dengan jelas struktur dan nilai-nilai dari array tiga dimensi yang telah diinputkan. Dari output tersebut, dapat terlihat bahwa nilai-nilai yang dimasukkan oleh pengguna berhasil disimpan dan ditampilkan dengan benar sesuai dengan indeksnya dalam array tiga dimensi.
@@ -278,6 +290,8 @@ int main() {
 }
 ```
 #### output
+
+![Screenshot (564)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/f2a4472e-229f-4130-a860-a7de87cf84ea)
 
 Program tersebut merupakan sebuah program C++ sederhana yang meminta pengguna untuk memasukkan jumlah elemen array, kemudian menginput elemen-elemen array tersebut. Selanjutnya, program akan mencari nilai maksimum, minimum, dan rata-rata dari elemen-elemen array yang dimasukkan. Proses pencarian nilai maksimum dan minimum dilakukan dengan melakukan iterasi pada array dan membandingkan setiap elemen dengan nilai maksimum dan minimum sementara. Sedangkan nilai rata-rata dihitung dengan menjumlahkan semua elemen array dan kemudian dibagi dengan jumlah elemen array. Hasil dari nilai maksimum, minimum, dan rata-rata akan ditampilkan ke layar.
 
