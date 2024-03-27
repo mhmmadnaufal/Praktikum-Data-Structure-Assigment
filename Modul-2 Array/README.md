@@ -292,52 +292,87 @@ Selain itu, program juga menampilkan seluruh elemen array dalam format matriks t
 
 ```c++
 #include <iostream>
-using namespace std;
+
+double hitungMaksimum(int arr[], int n) {
+    int maksimum = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > maksimum) {
+            maksimum = arr[i];
+        }
+    }
+    return maksimum;
+}
+
+double hitungMinimum(int arr[], int n) {
+    int minimum = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < minimum) {
+            minimum = arr[i];
+        }
+    }
+    return minimum;
+}
+
+double hitungRataRata(int arr[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+    return static_cast<double>(sum) / n;
+}
 
 int main() {
     int n;
-    cout << "Masukkan jumlah elemen array: ";
-    cin >> n;
+    std::cout << "Masukkan jumlah elemen dalam array: ";
+    std::cin >> n;
 
     int arr[n];
 
-    // Input elemen array dari pengguna
-    cout << "Masukkan elemen array:\n";
-    for (int i = 0; i < n; ++i) {
-        cout << "Elemen " << i + 1 << ": ";
-        cin >> arr[i];
+    for (int i = 0; i < n; i++) {
+        std::cout << "Masukkan elemen ke-" << i + 1 << ": ";
+        std::cin >> arr[i];
     }
 
-    int max = arr[0];
-    int min = arr[0];
-    double sum = 0;
+    int choice;
+    do {
+        std::cout << "Menu Pilihan:" << std::endl;
+        std::cout << "1. Hitung Maksimum" << std::endl;
+        std::cout << "2. Hitung Minimum" << std::endl;
+        std::cout << "3. Hitung Rata-rata" << std::endl;
+        std::cout << "4. Keluar" << std::endl;
+        std::cout << "Pilih menu (1/2/3/4): ";
+        std::cin >> choice;
 
-    for (int i = 0; i < n; ++i) {
-        if (arr[i] > max) {
-            max = arr[i];
+        switch (choice) {
+            case 1:
+                std::cout << "Nilai Maksimum: " << hitungMaksimum(arr, n) << std::endl;
+                break;
+            case 2:
+                std::cout << "Nilai Minimum: " << hitungMinimum(arr, n) << std::endl;
+                break;
+            case 3:
+                std::cout << "Nilai Rata-rata: " << hitungRataRata(arr, n) << std::endl;
+                break;
+            case 4:
+                std::cout << "Keluar dari program" << std::endl;
+                break;
+            default:
+                std::cout << "Pilihan tidak valid" << std::endl;
         }
-        if (arr[i] < min) {
-            min = arr[i];
-        }
-        sum += arr[i];
-    }
-
-    double average = sum / n;
-
-    cout << "Nilai Maksimum: " << max << endl;
-    cout << "Nilai Minimum: " << min << endl;
-    cout << "Nilai Rata-rata: " << average << endl;
+    } while (choice != 4);
 
     return 0;
 }
 ```
 #### output
 
-![Screenshot (564)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/f2a4472e-229f-4130-a860-a7de87cf84ea)
+![Screenshot (570)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/6e5afeb6-c91f-443f-bdb2-9e2769b7ddfd)
 
-Program tersebut merupakan sebuah program C++ sederhana yang meminta pengguna untuk memasukkan jumlah elemen array, kemudian menginput elemen-elemen array tersebut. Selanjutnya, program akan mencari nilai maksimum, minimum, dan rata-rata dari elemen-elemen array yang dimasukkan. Proses pencarian nilai maksimum dan minimum dilakukan dengan melakukan iterasi pada array dan membandingkan setiap elemen dengan nilai maksimum dan minimum sementara. Sedangkan nilai rata-rata dihitung dengan menjumlahkan semua elemen array dan kemudian dibagi dengan jumlah elemen array. Hasil dari nilai maksimum, minimum, dan rata-rata akan ditampilkan ke layar.
+Program tersebut adalah sebuah program C++ yang memungkinkan pengguna untuk menginputkan elemen-elemen ke dalam sebuah array, kemudian melakukan perhitungan nilai maksimum, minimum, dan rata-rata dari array tersebut. Program ini menggunakan tiga fungsi terpisah, yaitu hitungMaksimum, hitungMinimum, dan hitungRataRata, untuk melakukan perhitungan tersebut. Setelah pengguna memasukkan elemen-elemen array, program akan menampilkan menu pilihan yang berisi opsi untuk menghitung nilai maksimum, minimum, atau rata-rata, serta opsi untuk keluar dari program. Pengguna dapat memilih salah satu opsi tersebut dengan memasukkan angka yang sesuai, dan program akan menampilkan hasil perhitungan sesuai dengan pilihan pengguna. Program akan terus menampilkan menu pilihan sampai pengguna memilih opsi untuk keluar.
 
-Dalam contoh yang diberikan, array yang dimasukkan terdiri dari 5 elemen yaitu {1, 7, 5, 3, 5}. Setelah melakukan perhitungan, program menemukan bahwa nilai maksimum dari array tersebut adalah 7, nilai minimumnya adalah 1, dan nilai rata-ratanya adalah 4.2. Hal ini berarti bahwa dari elemen-elemen yang dimasukkan, 7 adalah nilai terbesar, 1 adalah nilai terkecil, dan rata-rata dari semua elemen tersebut adalah 4.2. Dengan program ini, pengguna dapat dengan cepat mengetahui nilai maksimum, minimum, dan rata-rata dari sejumlah elemen yang dimasukkan. Hal ini sangat berguna dalam analisis data sederhana dan dapat membantu pengguna dalam mengambil keputusan berdasarkan statistik dasar dari data yang dimiliki.  
+Program ini menggunakan array statis di mana ukuran array ditentukan oleh input pengguna. Saat menggunakan array statis seperti ini, ukuran array harus diketahui pada saat kompilasi program. Jika ingin membuat program yang lebih fleksibel dengan ukuran array yang dapat diubah saat runtime, bisa menggunakan pendekatan dengan alokasi memori dinamis atau menggunakan struktur data seperti std::vector dalam C++.
+
+Dalam contoh yang diberikan, array yang dimasukkan terdiri dari 5 elemen yaitu {6, 7, 8, 9, 4}. Setelah melakukan perhitungan, program menemukan bahwa nilai maksimum dari array tersebut adalah 9, nilai minimumnya adalah 4, dan nilai rata-ratanya adalah 6.8. Hal ini berarti bahwa dari elemen-elemen yang dimasukkan, 9 adalah nilai terbesar, 4 adalah nilai terkecil, dan rata-rata dari semua elemen tersebut adalah 6.8. Dengan program ini, pengguna dapat dengan cepat mengetahui nilai maksimum, minimum, dan rata-rata dari sejumlah elemen yang dimasukkan. Hal ini sangat berguna dalam analisis data sederhana dan dapat membantu pengguna dalam mengambil keputusan berdasarkan statistik dasar dari data yang dimiliki.  
 
 ## Kesimpulan
 Array atau dalam bahasa indonesia disebut larik, merupakan sebuah teknik pemrograman di mana array tersebut dianalogikan sebagai wadah untuk menyimpan data data yang berjumlah banyak dan memiliki tipe data yang sama[4]. Array merupakan struktur data yang digunakan untuk menyimpan sekumpulan nilai yang memiliki tipe data yang sama. Array memungkinkan kita untuk menyimpan data dalam urutan tertentu dan mengaksesnya dengan menggunakan indeks. Terdapat beberapa jenis array, di antaranya adalah array satu dimensi (1D array) yang merupakan kumpulan nilai dalam satu baris, array dua dimensi (2D array) yang merupakan matriks dengan baris dan kolom, array multidimensi yang memiliki lebih dari dua dimensi. Array sangat berguna dalam pemrograman karena memungkinkan kita untuk menyimpan dan mengelola data secara efisien, array empat dimensi merupakan struktur data yang memungkinkan penyimpanan data dalam empat level, sedangkan array lima dimensi memungkinkan penyimpanan data dalam lima level. array empat dimensi dan lima dimensi digunakan untuk kasus-kasus di mana data perlu disusun dalam struktur yang lebih kompleks dan memiliki banyak dimensi[5].
