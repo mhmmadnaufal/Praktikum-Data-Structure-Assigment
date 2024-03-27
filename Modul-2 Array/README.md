@@ -221,8 +221,6 @@ Program ini dapat membantu pengguna untuk memahami cara memisahkan angka genap d
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
-#### Contoh program
-
 ```c++
 #include <iostream>
 using namespace std;
@@ -345,8 +343,8 @@ Dalam contoh yang diberikan, array yang dimasukkan terdiri dari 5 elemen yaitu {
 Array atau dalam bahasa indonesia disebut larik, merupakan sebuah teknik pemrograman di mana array tersebut dianalogikan sebagai wadah untuk menyimpan data data yang berjumlah banyak dan memiliki tipe data yang sama[4]. Array merupakan struktur data yang digunakan untuk menyimpan sekumpulan nilai yang memiliki tipe data yang sama. Array memungkinkan kita untuk menyimpan data dalam urutan tertentu dan mengaksesnya dengan menggunakan indeks. Terdapat beberapa jenis array, di antaranya adalah array satu dimensi (1D array) yang merupakan kumpulan nilai dalam satu baris, array dua dimensi (2D array) yang merupakan matriks dengan baris dan kolom, array multidimensi yang memiliki lebih dari dua dimensi. Array sangat berguna dalam pemrograman karena memungkinkan kita untuk menyimpan dan mengelola data secara efisien, array empat dimensi merupakan struktur data yang memungkinkan penyimpanan data dalam empat level, sedangkan array lima dimensi memungkinkan penyimpanan data dalam lima level. array empat dimensi dan lima dimensi digunakan untuk kasus-kasus di mana data perlu disusun dalam struktur yang lebih kompleks dan memiliki banyak dimensi[5].
 
 ## Referensi
-[1] Putri, M. P. (Ed.). Algoritma dan Struktur Data. CV WIDINA MEDIA UTAMA, 2022.
-[2] R. Firliana and P. Kasih, Adjie Media Nusantara, "Algoritma dan Pemrograman C++," 2018.
-[3] Efendi, Yasin. Buku Ajar Pendidikan Algoritma dan Struktur Data. Eureka Media Aksara, 2022.
-[4] Putra, Muhammad Taufik D., et al. BELAJAR DASAR PEMROGRAMAN DENGAN C++. Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA, 2022.
+[1] Putri, M. P. (Ed.). Algoritma dan Struktur Data. CV WIDINA MEDIA UTAMA, 2022. <br>
+[2] R. Firliana and P. Kasih, Adjie Media Nusantara, "Algoritma dan Pemrograman C++," 2018. <br>
+[3] Efendi, Yasin. Buku Ajar Pendidikan Algoritma dan Struktur Data. Eureka Media Aksara, 2022. <br>
+[4] Putra, Muhammad Taufik D., et al. BELAJAR DASAR PEMROGRAMAN DENGAN C++. Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA, 2022. <br>
 [5] J. Smith, "Exploring High-Dimensional Arrays for Big Data Processing," Journal of Big Data Analytics, vol. 3, no. 1, pp. 45-55, 2018.
