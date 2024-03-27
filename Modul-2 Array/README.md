@@ -30,7 +30,7 @@ Pendeklarasian array diawali dengan penyebutan tipe data diikuti nama variabel a
 
 ### 2. Array dua dimensi :
 
-Array dua dimensi atau yang sering dikenal dengan istilah matriks merupakan Pengembangan dari Array satu dimensi, jika pada array satu dimensi hanya terdiri dari satu baris dan beberapa kolom saja, maka untuk array dua dimensi ini terdiri lebih dari satu (beberapa) baris dan kolom. Dengan demikian array dua dimensi tersusun dalam bentuk kolom serta baris, yang mana indeks pertamanya dinyatakan sebagai baris dan untuk indeks keduanya dinyatakan sebagai kolom. [3] 
+Array dua dimensi atau yang sering dikenal dengan istilah matriks merupakan Pengembangan dari Array satu dimensi, jika pada array satu dimensi hanya terdiri dari satu baris dan beberapa kolom saja, maka untuk array dua dimensi ini terdiri lebih dari satu (beberapa) baris dan kolom. Dengan demikian array dua dimensi tersusun dalam bentuk kolom serta baris, yang mana indeks pertamanya dinyatakan sebagai baris dan untuk indeks keduanya dinyatakan sebagai kolom [3]. 
 
 Array dua dimensi digunakan untuk menyimpan data yang memiliki hubungan spasial, seperti gambar, tabel, atau matriks. Setiap elemen dalam array ini diakses dengan dua indeks, yaitu indeks baris dan indeks kolom. Indeks baris menentukan posisi elemen di baris tertentu, dan indeks kolom menentukan posisi elemen di kolom tertentu.
 
@@ -169,11 +169,55 @@ Setelah selesai melakukan iterasi, program akan mencetak nilai maksimum beserta 
 
 
 ```C++
+#include <iostream>
+using namespace std;
 
+int main() {
+    const int MAX_SIZE = 100;
+    int data[MAX_SIZE];
+    int genap[MAX_SIZE], ganjil[MAX_SIZE];
+    int dataCount = 0, genapCount = 0, ganjilCount = 0;
+
+    cout << "Masukkan data array: ";
+    int num;
+    while (cin.peek() != '\n' && dataCount < MAX_SIZE) {
+        cin >> num;
+        data[dataCount] = num;
+        dataCount++;
+        if (num % 2 == 0) {
+            genap[genapCount] = num;
+            genapCount++;
+        } else {
+            ganjil[ganjilCount] = num;
+            ganjilCount++;
+        }
+    }
+
+    cout << "Data array:";
+    for (int i = 0; i < dataCount; ++i) {
+        cout << " " << data[i];
+    }
+
+    cout << "\nNomor genap:";
+    for (int i = 0; i < genapCount; ++i) {
+        cout << " " << genap[i];
+    }
+
+    cout << "\nNomor ganjil:";
+    for (int i = 0; i < ganjilCount; ++i) {
+        cout << " " << ganjil[i];
+    }
+
+    return 0;
+}
 ```
 #### Output:
 
-Code di atas adalah 
+![Screenshot (569)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/b0e38ca8-7154-45b3-b6a7-520400f409d9)
+
+Code di atas merupakan program sederhana dalam bahasa C++ yang meminta pengguna untuk memasukkan data array. Program akan terus menerima input angka hingga pengguna menekan tombol Enter. Setelah semua data dimasukkan, program akan memisahkan angka genap dan ganjil dari data array tersebut. Kemudian, program akan menampilkan data array yang dimasukkan oleh pengguna, diikuti dengan angka genap dan angka ganjil yang dipisahkan. Program ini menggunakan array untuk menyimpan data array, angka genap, dan angka ganjil. Selain itu, program juga menggunakan variabel untuk menghitung jumlah data yang dimasukkan dan jumlah angka genap serta ganjil.
+
+Program ini dapat membantu pengguna untuk memahami cara memisahkan angka genap dan ganjil dari sebuah data array yang dimasukkan. Dengan menggunakan loop while dan kondisi cin.peek() != '\n', program akan terus menerima input angka hingga pengguna menekan tombol Enter. Setelah semua data dimasukkan, program akan menampilkan data array beserta angka genap dan ganjil yang dipisahkan. Dengan demikian, pengguna dapat dengan mudah melihat pemisahan angka genap dan ganjil dari data array yang dimasukkan.
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
@@ -298,9 +342,11 @@ Program tersebut merupakan sebuah program C++ sederhana yang meminta pengguna un
 Dalam contoh yang diberikan, array yang dimasukkan terdiri dari 5 elemen yaitu {1, 7, 5, 3, 5}. Setelah melakukan perhitungan, program menemukan bahwa nilai maksimum dari array tersebut adalah 7, nilai minimumnya adalah 1, dan nilai rata-ratanya adalah 4.2. Hal ini berarti bahwa dari elemen-elemen yang dimasukkan, 7 adalah nilai terbesar, 1 adalah nilai terkecil, dan rata-rata dari semua elemen tersebut adalah 4.2. Dengan program ini, pengguna dapat dengan cepat mengetahui nilai maksimum, minimum, dan rata-rata dari sejumlah elemen yang dimasukkan. Hal ini sangat berguna dalam analisis data sederhana dan dapat membantu pengguna dalam mengambil keputusan berdasarkan statistik dasar dari data yang dimiliki.  
 
 ## Kesimpulan
-Kesimpulannya, 
+Array atau dalam bahasa indonesia disebut larik, merupakan sebuah teknik pemrograman di mana array tersebut dianalogikan sebagai wadah untuk menyimpan data data yang berjumlah banyak dan memiliki tipe data yang sama[4]. Array merupakan struktur data yang digunakan untuk menyimpan sekumpulan nilai yang memiliki tipe data yang sama. Array memungkinkan kita untuk menyimpan data dalam urutan tertentu dan mengaksesnya dengan menggunakan indeks. Terdapat beberapa jenis array, di antaranya adalah array satu dimensi (1D array) yang merupakan kumpulan nilai dalam satu baris, array dua dimensi (2D array) yang merupakan matriks dengan baris dan kolom, array multidimensi yang memiliki lebih dari dua dimensi. Array sangat berguna dalam pemrograman karena memungkinkan kita untuk menyimpan dan mengelola data secara efisien, array empat dimensi merupakan struktur data yang memungkinkan penyimpanan data dalam empat level, sedangkan array lima dimensi memungkinkan penyimpanan data dalam lima level. array empat dimensi dan lima dimensi digunakan untuk kasus-kasus di mana data perlu disusun dalam struktur yang lebih kompleks dan memiliki banyak dimensi[5].
 
 ## Referensi
-[1] Putri, M. P. (Ed.). (2022). Algoritma dan Struktur Data. CV WIDINA MEDIA UTAMA
-[2] 
-[3]
+[1] Putri, M. P. (Ed.). Algoritma dan Struktur Data. CV WIDINA MEDIA UTAMA, 2022.
+[2] R. Firliana and P. Kasih, Adjie Media Nusantara, "Algoritma dan Pemrograman C++," 2018.
+[3] Efendi, Yasin. Buku Ajar Pendidikan Algoritma dan Struktur Data. Eureka Media Aksara, 2022.
+[4] Putra, Muhammad Taufik D., et al. BELAJAR DASAR PEMROGRAMAN DENGAN C++. Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA, 2022.
+[5] J. Smith, "Exploring High-Dimensional Arrays for Big Data Processing," Journal of Big Data Analytics, vol. 3, no. 1, pp. 45-55, 2018.
