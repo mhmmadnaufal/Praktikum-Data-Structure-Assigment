@@ -30,7 +30,6 @@ double hitungRataRata(int arr[], int n) {
 
 int main() {
     int n;
-<<<<<<< HEAD
     std::cout << "Masukkan jumlah elemen dalam array: ";
     std::cin >> n;
 
@@ -68,39 +67,6 @@ int main() {
                 std::cout << "Pilihan tidak valid" << std::endl;
         }
     } while (choice != 4);
-=======
-    cout << "Masukkan jumlah elemen array: ";
-    cin >> n;
-
-    int arr[n];
-
-    // Input elemen array dari pengguna
-    cout << "Masukkan elemen array:\n";
-    for (int i = 0; i < n; ++i) {
-        cout << "Elemen " << i + 1 << ": ";
-        cin >> arr[i];
-    }
-
-    int max = arr[0];
-    int min = arr[0];
-    double sum = 0;
-
-    for (int i = 0; i < n; ++i) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-        if (arr[i] < min) {
-            min = arr[i];
-        }
-        sum += arr[i];
-    }
-
-    double average = sum / n;
-
-    cout << "Nilai Maksimum: " << max << endl;
-    cout << "Nilai Minimum: " << min << endl;
-    cout << "Nilai Rata-rata: " << average << endl;
->>>>>>> 3427008ce8d9a5b68282a5549788a74fd811a2a3
 
     return 0;
 }
