@@ -1,32 +1,54 @@
 #include <iostream>
+using namespace std;
 
-int main() {
-    int size1, size2, size3;
+int main() 
+{
+    int x, y, z;
+    cout << "Masukkan jumlah baris: ";
+    cin >> x;
+    cout << "Masukkan jumlah kolom: ";
+    cin >> y;
+    cout << "Masukkan jumlah layer: ";
+    cin >> z;
 
-    std::cout << "Masukkan ukuran array tiga dimensi (size1 size2 size3): ";
-    std::cin >> size1 >> size2 >> size3;
+    int arr[x][y][z];
 
-    int array3d[size1][size2][size3];
+    for (int a = 0; a < x; a++) 
+    {
+        for (int b = 0; b < y; b++) 
+        {
+            for (int c = 0; c < z; c++) 
+            {
+                cout << "Input array[" << a << "][" << b << "][" << c << "] = ";
+                cin >> arr[a][b][c];
+            }
+        }
+        cout << endl;
+    }
 
-    std::cout << "Masukkan elemen-elemen array tiga dimensi:\n";
-    for (int x = 0; x < size1; x++) {
-        for (int y = 0; y < size2; y++) {
-            for (int z = 0; z < size3; z++) {
-                std::cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
-                std::cin >> array3d[x][y][z];
+    for (int a = 0; a < x; a++)
+    {
+        for (int b = 0; b < y; b++)
+        {
+            for (int c = 0; c < z; c++)
+            {
+                cout << "Data Array[" << a << "][" << b << "][" << c << "] = " << arr[a][b][c] << endl;
             }
         }
     }
+    cout << endl;
 
-    std::cout << "\nArray tiga dimensi yang dimasukkan:\n";
-    for (int x = 0; x < size1; x++) {
-        for (int y = 0; y < size2; y++) {
-            for (int z = 0; z < size3; z++) {
-                std::cout << array3d[x][y][z] << " ";
+    for (int a = 0; a < x; a++)
+    {
+        for (int b = 0; b < y; b++)
+        {
+            for(int c = 0; c < z; c++)
+            {
+                cout << arr[a][b][c] << " ";
             }
-            std::cout << std::endl;
+            cout << endl;
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 
     return 0;

@@ -1,55 +1,41 @@
 #include <iostream>
-#include <vector>
-#include <sstream>
-#include <string>
+using namespace std;
 
 int main() {
-    std::string input;
-    std::vector<int> data;
-    std::vector<int> genap;
-    std::vector<int> ganjil;
+    const int MAX_SIZE = 100;
+    int data[MAX_SIZE];
+    int genap[MAX_SIZE], ganjil[MAX_SIZE];
+    int dataCount = 0, genapCount = 0, ganjilCount = 0;
 
-    std::cout << "Masukkan data array: ";
-    std::getline(std::cin, input);
-    std::istringstream iss(input);
+    cout << "Masukkan data array: ";
     int num;
-    while (iss >> num) {
-        data.push_back(num);
-    }
-
-    for (int num : data) {
+    while (cin.peek() != '\n' && dataCount < MAX_SIZE) {
+        cin >> num;
+        data[dataCount] = num;
+        dataCount++;
         if (num % 2 == 0) {
-            genap.push_back(num);
+            genap[genapCount] = num;
+            genapCount++;
         } else {
-            ganjil.push_back(num);
+            ganjil[ganjilCount] = num;
+            ganjilCount++;
         }
     }
 
-    std::cout << "Data array:";
-    for (size_t i = 0; i < data.size(); ++i) {
-        std::cout << " " << data[i];
-        if (i < data.size() - 1) {
-            std::cout << ",";
-        }
+    cout << "Data array:";
+    for (int i = 0; i < dataCount; ++i) {
+        cout << " " << data[i];
     }
 
-    std::cout << "\nNomor genap:";
-    for (size_t i = 0; i < genap.size(); ++i) {
-        std::cout << " " << genap[i];
-        if (i < genap.size() - 1) {
-            std::cout << ",";
-        }
+    cout << "\nNomor genap:";
+    for (int i = 0; i < genapCount; ++i) {
+        cout << " " << genap[i];
     }
 
-    std::cout << "\nNomor ganjil:";
-    for (size_t i = 0; i < ganjil.size(); ++i) {
-        std::cout << " " << ganjil[i];
-        if (i < ganjil.size() - 1) {
-            std::cout << ",";
-        }
+    cout << "\nNomor ganjil:";
+    for (int i = 0; i < ganjilCount; ++i) {
+        cout << " " << ganjil[i];
     }
 
     return 0;
 }
-
-
