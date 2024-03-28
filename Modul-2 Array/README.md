@@ -1,340 +1,385 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul Array</h1>
 <p align="center">Muhammad Naufal | 2311110034</p>
 
 ## Dasar Teori
 
-Berbicara mengenai pemrograman, tidak lepas dengan yang namanya tipe data. Tipe data adalah jenis dari data yang akan disimpan di dalam suatu variabel. Tipe data mendefinisikan metode penyimpanan untuk merepresentasikan informasi dan cara informasi diinterpretasikan. Tipe data berkaitan erat dengan pemesanan memori untuk variabel karena tipe data variabel menentukan cara kompilator menginterpretasikan isi memori. Tipe data juga menentukan operasi operasi dan operator apa saja yang dapat dilakukan dan digunakan terhadap variabel yang dibentuk berdasarkan tipe data yang digunakan. Tipe data pada bahasa pemrograman C++ dibagi ke dalam 2 kategori, yaitu tipe data dasar dan tipe data bentukan [1]. 
+Array merupakan struktur data yang paling dasar dalam sebuah bahasa pemrograman. Array dapat mempermudah dalam menyimpan data karena array berisi komponen-komponen yang memiliki tipe data yang sama yang setiap anggota array dapat diakses melalui suatu indeks. Setiap nomor index dalam array dialokasikan dalam ruang memori tertentu. Dalam bahasa pemrograman C++, ukuran dan tipe array tidak dapat diubah setelah deklarasinya[1]. 
 
-tipe-tipe data berdasarkan sifat dan karakteristiknya dapat dikelompokkan menjadi tiga, yaitu :
-1. Tipe data primitif
-2. Tipe data abstrak
-3. Tipe data koleksi
+Array dapat dibagi menjadi beberapa jenis yaitu :
+1. Array satu dimensi
+2. Array dua dimensi 
+3. Array multidimensi
+4. Array empat dimensi
+5. Array lima dimensi
 
-Berikut penjelasannya dari masing masing tipe data diatas :
+Berikut penjelasannya dari masing masing array diatas :
 
-### 1. Tipe Data Primitif :
+### 1. Array satu dimensi :
 
-Tipe data primitif adalah tipe data dasar yang tersedia dalam bahasa pemrograman dan biasanya sudah didefinisikan secara langsung oleh bahasa tersebut. Tipe data primitif merepresentasikan nilai tunggal dan sederhana, seperti bilangan bulat, bilangan desimal, karakter, dan boolean. Contoh tipe data primitif antara lain :
-- Integer : digunakan untuk menyimpan bilangan bulat seperti 12, 1, 4, dan lain sebagainya.
-- Float : digunakan untuk menyimpan bilangan desimal seperti 1.5, 2.5, 3.14, dan lain sebagainya.
-- Char : digunakan untuk menyimpan huruf atau simbol seperti A, B, C, dan lain sebagainya.
-- Boolean : digunakan untuk menyimpan nilai boolean yang hanya memiliki dua nilai saja yaitu true atau false.
+Array satu dimensi atau dapat disebut dengan vektor adalah tipe variabel yang berisi kumpulan data dengan tipe data yang sama dan disusun dalam satu baris atau satu dimensi. Array satu dimensi relatif sederhana untuk dipahami dan digunakan dan biasanya digunakan untuk menyimpan data yang tidak memiliki hubungan spasial, seperti daftar nama atau nilai.
 
-### 2. Tipe Data Abstrak :
-Tipe data abstrak adalah tipe data yang didefinisikan oleh pemrogramernya sendiri (biasanya menggunakan struktur data) dan tidak langsung tersedia dalam bahasa pemrograman. Tipe data abstrak digunakan untuk merepresentasikan struktur data yang kompleks dan memiliki operasi-operasi tertentu yang dapat dilakukan terhadap data tersebut. Contoh tipe data abstrak adalah stack, queue, linked list, dan tree.
+- Bentuk umum: <br>
+tipeData NamaArray [JumlahElemen] = {<Inisialisasi>}; <br>
+int Bola [10] = { 17, 21, 33, dst};
 
-### 3. Tipe Data Koleksi :
-Tipe data koleksi adalah tipe data yang digunakan untuk mengelompokkan beberapa nilai atau objek menjadi satu kesatuan. Tipe data ini dapat menyimpan, mengelola, dan mengakses sejumlah besar data dengan cara terstruktur. Tipe data koleksi memungkinkan untuk menyimpan banyak nilai dalam satu variabel. Contoh tipe data koleksi antara lain :
-- array : kumpulan-kumpulan variabel yang menyimpan data dengan tipe yang sama atau data-data yang tersusun secara linear dimana di dalamnya terdapat elemen dengan tipe yang sama. Indeks dalam array menyatakan elemen yang disimpan dan panjang atau length menyatakan total elemen yang tersimpan. Pada bahasa pemprograman C++ pada array selalu dimulai dari indeks nol. contohnya : Char huruf[7] = {‘l’,’m’,’n’,’o’,’p’,’q’,’r’}, berada pada indeks berapakah huruf ‘n’? jawabannya yaitu huruf n berada pada indeks ke 2, kenapa? karena indeks array selalu mulai dari angka nol.
-- vektor : Mirip seperti array tetapi jumlah elemennya dinamis dan alokasi memorinya dilakukan otomatis dan bersebelahan.
-- map : Map mirip juga seperti array, namun indeksnya dapat berupa selain tipe data integer. Pada map, indeks dapat disebut juga dengan "key", self balancing tree khususnya black tree menggunakan std::map.
+- contoh : <br>
+unsigned int Tinggi Badan [100];//deklarasi array <br>
+bool Hadir [5] = {true, true, false, false);//pemberian nilai array pada inisialisasi
+
+Pendeklarasian array diawali dengan penyebutan tipe data diikuti nama variabel array, diikuti jumlah elemen. Jika array hendak diberi nilai awal, nilai-nilai awal dituliskan dalam inisialisasi. Jika inisialisasi kurang dari jumlah elemen array, sisanya akan diinisialisasikan dengan nol. Elemen array diakses dengan menyebutkan indeks posisi elemen tersebut dalam array. Elemen pertama array memiliki indeks 0[2].
+
+### 2. Array dua dimensi :
+
+Array dua dimensi atau yang sering dikenal dengan istilah matriks merupakan Pengembangan dari Array satu dimensi, jika pada array satu dimensi hanya terdiri dari satu baris dan beberapa kolom saja, maka untuk array dua dimensi ini terdiri lebih dari satu (beberapa) baris dan kolom. Dengan demikian array dua dimensi tersusun dalam bentuk kolom serta baris, yang mana indeks pertamanya dinyatakan sebagai baris dan untuk indeks keduanya dinyatakan sebagai kolom [3]. 
+
+Array dua dimensi digunakan untuk menyimpan data yang memiliki hubungan spasial, seperti gambar, tabel, atau matriks. Setiap elemen dalam array ini diakses dengan dua indeks, yaitu indeks baris dan indeks kolom. Indeks baris menentukan posisi elemen di baris tertentu, dan indeks kolom menentukan posisi elemen di kolom tertentu.
+
+### 3. Array multidimensi :
+
+Array Multidimensi merupakan array yang serupa dengan array satu dimensi maupun array dua dimensi, namun array multidimensi dapat memiliki memori yang lebih besar. Biasanya array multidimensi digunakan untuk menyebut array dengan dimensi lebih dari dua atau array yang mempunyai lebih dari dua subskrip, seperti untuk menyebut array tiga dimensi, empat dimensi, lima dimensi dan seterusnya.
+- Deklarasi Array Multidimensi <br>
+tipedata namaarray [ukuran1][ukuran2]...[ukuranN]; <br>
+Di mana : <br>
+    - tipedata: Tipe data yang akan disimpan dalam array.
+    - Nama array: Nama array.
+    - size1, size2,…, sizeN: Ukuran setiap dimensi.
+
+### 4. Array empat dimensi :
+
+Dalam bahasa pemrograman C++, array empat dimensi adalah struktur data yang terdiri dari empat level dimensi. Dalam C++. Setiap elemen dalam array 4 dimensi diakses menggunakan 4 indeks. Misalnya, jika kita memiliki array 4 dimensi dengan bentuk (a, b, c, d), maka kita akan memerlukan 4 indeks (i, j, k, l) untuk mengakses elemen tertentu di dalamnya. Array empat dimensi dapat didefinisikan dengan menggunakan sintaks berikut: <br>
+int array[a][b][c][d]; <br>
+Di mana: <br>
+- int adalah tipe data elemen dalam array <br>
+- a, b, c, dan d adalah ukuran array untuk masing-masing dimensi
+
+Array empat dimensi dalam C++ dapat digunakan untuk menyimpan data yang terstruktur dalam empat level hierarki yang berbeda. Meskipun jarang digunakan dalam kasus umum, array empat dimensi dapat berguna dalam kasus-kasus khusus di mana data perlu diorganisir dalam struktur yang kompleks.
+
+### 5. Array lima dimensi :
+
+Dalam bahasa pemrograman C++, array lima dimensi adalah struktur data yang terdiri dari lima level dimensi. Dalam C++, array lima dimensi dapat didefinisikan dengan menggunakan sintaks berikut: <br>
+int array[a][b][c][d][e]; <br>
+Di mana: <br>
+- int adalah tipe data elemen dalam array
+- a, b, c, d, dan e adalah ukuran array untuk masing-masing dimensi
+
+Array lima dimensi dalam C++ dapat digunakan untuk menyimpan data yang terstruktur dalam lima level hierarki yang berbeda. Meskipun jarang digunakan dalam kasus umum, array lima dimensi dapat berguna dalam kasus-kasus khusus di mana data perlu diorganisir dalam struktur yang sangat kompleks, seperti dalam pemrosesan citra medis, simulasi fisika, atau pemodelan matematika yang kompleks. Array lima dimensi memungkinkan representasi data yang lebih kompleks dan struktur yang lebih dalam dibandingkan dengan array berdimensi lebih rendah.
 
 ## Guided 
 
-### 1. Tipe Data Primitif
+### GUIDED-1 (Program input array tiga dimensi)
 
 ```C++
 #include <iostream>
 using namespace std;
-//Main Program
+// PROGRAM INPUT ARRAY 3 DIMENSI
 int main()
 {
-    char op;
-    float num1, num2;
-    //It allows user to enter operator i.e. +, -, *, /
-    cin >> op;
-    //It allow user to enter the operands
-    cin >> num1 >> num2;
-    //Switch statement begins
-    switch (op)
+    //Deklarasi array
+    int arr [2][3][3];
+    // Input elemen
+    for (int x = 0; x < 2; x++)
     {
-    //If user enter +
-    case '+':
-        cout << num1 + num2;
-        break;
-    //If use enter -
-    case '-':
-        cout << num1 - num2;
-        break;
-    //If use enter *
-    case '*':
-        cout << num1 * num2;
-        break;
-    //If use enter /
-    case '/':
-        cout << num1 / num2;
-        break;
-    //If the operator is other than +, -, * or /,
-    //error message will display
-    default:
-        cout << "Error! operator is not correct";
-    } // switch statement ends
-    return 0;
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << "input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin >> arr [x][y][z];
+        
+            }
+        }
+        cout << endl;
+    }
+    // Output Array
+    for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << arr[x][y][z] << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
 }
 ```
 #### Output
-![Screenshot (507)](https://github.com/mhmmadnaufal/Praktikum-Struktur-Data-Assigment/assets/153933119/d94a832e-57ea-402a-b0ff-6e19f5726c8b)
-Kodingan di atas adalah kode yang menjalankan sebuah program yang meminta pengguna untuk memasukkan sebuah operator matematika (+, -, *, /) dan dua angka, progam di atas menggunakan fungsi 'switch' untuk melakukan operasi sesuai dengan operator yang dimasukkan, jika operator yang dimasukkan tidak sesuai dengan yang ada pada program, maka program akan mencetak error.
 
-### 2. Tipe Data Abstrak
+![Screenshot (562)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/85727ed3-13d7-4ca8-94eb-61be0bba6827)
+
+Codingan di atas merupakan program untuk menginputkan dan menampilkan array 3 dimensi berukuran 2x3x3. Pertama, program mendeklarasikan array arr dengan ukuran 2x3x3. Selanjutnya, program meminta pengguna untuk memasukkan nilai elemen-elemen array tersebut dengan menggunakan tiga nested loop untuk mengakses setiap elemen array sesuai dengan dimensinya. Pengguna diminta untuk memasukkan nilai dari setiap elemen array dengan format "Array[x][y][z] = nilai".
+
+Setelah selesai menginputkan nilai elemen array, program akan menampilkan isi array 3 dimensi tersebut ke layar. Program menggunakan nested loop kembali untuk melakukan iterasi dan mencetak nilai setiap elemen array ke layar dengan format yang sesuai. Dengan demikian, program tersebut memungkinkan pengguna untuk menginputkan dan melihat isi dari array 3 dimensi berukuran 2x3x3 secara sistematis dan terstruktur. 
+
+### GUIDED-2 (Program mencari nilai maksimal pada array)
 
 ```C++
 #include <iostream>
 using namespace std;
 
-//struct
-struct Mahasiswa
-{
-    const char *name;
-    const char *address;
-    int age;
-};
+int main(){
+    int maks, a, lokasi;
+    cout << "Masukkan panjang array: ";
+    cin >> a;
 
-int main()
-{
+    if (a <= 0){
+        cout << "Panjang array harus lebih besar dari 0." << endl;
+        return 1; //Return 1 to indicate error
+    }
 
-    //menggunakan struct
-    struct Mahasiswa mhs1, mhs2;
-    //mengisi nilai ke struct
-    mhs1.name = "Dian";
-    mhs1.address = "Mataram";
-    mhs1.age = 18;
-    mhs2.name = "Bambang";
-    mhs2.address = "Surabaya";
-    mhs2.age = 23;
+    int array[a];
+    cout << "Masukkan " << a << " angka\n";
 
-    //mencetak isi struct
-    cout<<"Mahasiswa 1\n";
-    cout<<"Nama: " << mhs1.name <<endl;
-    cout<<"Alamat: " << mhs1.address <<endl;
-    cout<<"Alamat: " << mhs1.age <<endl;
+    for (int i = 0; i < a; i++){
+        cout << "Array ke-" << (i + 1) << ": ";
+        cin >> array[i];
+    }
 
-    cout<<"\nMahasiswa 2/n";
-    cout<<"Nama: " << mhs2.name <<endl;
-    cout<<"Alamat: " << mhs2.address <<endl;
-    cout<<"Alamat: " << mhs2.age <<endl;
+    maks = array[0];
+    lokasi = 0;
 
-    return 0;
+    for (int i = 1;i < a; i++){
+        if (array[i] > maks){
+            maks = array[i];
+            lokasi = i;
+        }
+    }
+
+    cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << (lokasi + 1) << endl;
+
+    return 0; //Return 0 to indicate successfull execution
 }
 ```
 #### Output
-![Screenshot (510)](https://github.com/mhmmadnaufal/Praktikum-Struktur-Data-Assigment/assets/153933119/687a53cd-a465-4c94-a2bf-86c0baedf7ba)
-Kodingan di atas adalah kode yang menjalankan program yang menggunakan fungsi "struct" untuk menampilkan informasi mahasiswa, pada kode diatas Mahasiswa memiliki tiga data anggota yaitu name, address, dan age.
 
-Di dalam struct ada fungsi display() yang digunakan untuk mencetak informasi mahasiswa ke layar. Menggunakan fungsi main(), dan membuat dua variabel Mahasiswa (mhs1 dan mhs2). Setelah mengisi nilai ke struct, program akan mencetak isi struct tersebut menggunakan fungsi printf() yang hasilnya akan berupa informasi nama, alamat, dan usia masing-masing mahasiswa.
+![Screenshot (563)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/1fb2833f-5f4c-4136-a394-41daa5640e52)
 
-### 3. Tipe Data Koleksi
 
-```C++
-#include <iostream>
-using namespace std;
+Codingan di atas merupakan program sederhana yang bertujuan untuk mencari nilai maksimum dari array yang diinputkan oleh pengguna. Pertama, program akan meminta pengguna untuk memasukkan panjang array, kemudian meminta pengguna untuk memasukkan nilai-nilai array tersebut. Selanjutnya, program akan melakukan iterasi pada setiap elemen array untuk mencari nilai maksimum. Proses pencarian nilai maksimum dilakukan dengan membandingkan setiap elemen array dengan nilai maksimum sementara yang disimpan dalam variabel 'maks'. Jika nilai elemen array lebih besar dari nilai maksimum sementara, maka nilai maksimum sementara akan diperbarui bersama dengan indeksnya yang disimpan dalam variabel 'lokasi'.
 
-int main()
-{
-    //deklarasi dan inisialisasi array
-    int nilai[5];
-    nilai[0] = 23;
-    nilai[1] = 50;
-    nilai[2] = 34;
-    nilai[3] = 78;
-    nilai[4] = 90;
-
-    //mencetak array
-    cout << "Isi array pertama :" << nilai[0] << endl;
-    cout << "Isi array kedua :" << nilai[1] << endl;
-    cout << "Isi array ketiga :" << nilai[2] << endl;
-    cout << "Isi array keempat :" << nilai[3] << endl;
-    cout << "Isi array kelima :" << nilai[4] << endl;
-    return 0;
-}
-```
-#### Output
-![Screenshot (509)](https://github.com/mhmmadnaufal/Praktikum-Struktur-Data-Assigment/assets/153933119/3843798a-1d14-45d0-9098-e0eef00886c9)
-Kodingan di atas adalah program penggunaan array yang terdiri dari lima elemen bertipe integer. Array diatas bernama nilai yang terdiri dari lima elemen, nilai pada array nilai diinisialisasi menggunakan indeks untuk setiap elemen array.
-
-Menggunakan fungsi cout untuk mencetak nilai dari setiap array nilai, setelah mencetak isi dari setiap elemen array, program akan mengembalikan nilai 0 dari fungsi main() yang dapat diartikan bahwa program tersebut berjalan sukses.
+Setelah selesai melakukan iterasi, program akan mencetak nilai maksimum beserta indeksnya ke layar. Jika panjang array yang diinputkan oleh pengguna kurang dari atau sama dengan 0, program akan mencetak pesan kesalahan dan mengembalikan nilai 1 untuk menandakan adanya kesalahan. Namun, jika panjang array valid dan proses pencarian nilai maksimum selesai tanpa masalah, program akan mengembalikan nilai 0 untuk menandakan bahwa eksekusi program telah berhasil. Dengan demikian, program tersebut memberikan pengguna informasi mengenai nilai maksimum dari array yang telah diinputkan serta lokasi indeks dari nilai maksimum tersebut.
 
 ## Unguided 
 
-### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+### 1. Buatlah program untuk menampilkan output seperti berikut dengan data yang diinputkan oleh user!
+
+![Screenshot (561)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/ec13f030-e35d-479a-8d8e-be4159ee47df)
+
 
 ```C++
 #include <iostream>
 using namespace std;
 
-// Fungsi untuk menghitung keliling persegi
-int hitungKelilingPersegi(int sisi) {
-    return 4 * sisi;
-}
-
-// Fungsi untuk menghitung volume kubus
-double hitungVolumeKubus(double sisi) {
-    return sisi * sisi * sisi;
-}
-
 int main() {
-    char pilihanMenu; // Variabel yang digunakan untuk memproses menu pilihan user
-    int ukuranSisi; // Variabel untuk menampung data input dari user
-    double sisi; // Variabel untuk menampung data input dari user
+    const int MAX_SIZE = 100;
+    int data[MAX_SIZE];
+    int genap[MAX_SIZE], ganjil[MAX_SIZE];
+    int dataCount = 0, genapCount = 0, ganjilCount = 0;
 
-    // Menampilkan menu pilihan
-    cout << "1. Hitung Keliling Persegi\n2. Hitung Volume Kubus\nPilih Menu (1, 2): ";
-    cin >> pilihanMenu;
+    cout << "Masukkan data array: ";
+    int num;
+    while (cin.peek() != '\n' && dataCount < MAX_SIZE) {
+        cin >> num;
+        data[dataCount] = num;
+        dataCount++;
+        if (num % 2 == 0) {
+            genap[genapCount] = num;
+            genapCount++;
+        } else {
+            ganjil[ganjilCount] = num;
+            ganjilCount++;
+        }
+    }
 
-    switch (pilihanMenu) {
-    case '1':
-        cout << "Masukkan panjang sisi persegi: ";
-        cin >> ukuranSisi;
-        // Menampilkan hasil perhitungan luas persegi
-        cout << "Keliling Persegi dengan sisi " << ukuranSisi << " adalah: " << hitungKelilingPersegi(ukuranSisi) << endl;
-        break;
-    case '2':
-        cout << "Masukkan Sisi Kubus: " << endl;
-        cout << "Sisi: ";
-        cin >> sisi;
-        
-        // Menampilkan hasil perhitungan volume balok
-        cout << "Volume Kubus dengan Sisi " << sisi << " adalah: "
-             << hitungVolumeKubus(sisi) << endl;
-        break;
-    default:
-        cout << "Menu Tidak Ada";
+    cout << "Data array:";
+    for (int i = 0; i < dataCount; ++i) {
+        cout << " " << data[i];
+    }
+
+    cout << "\nNomor genap:";
+    for (int i = 0; i < genapCount; ++i) {
+        cout << " " << genap[i];
+    }
+
+    cout << "\nNomor ganjil:";
+    for (int i = 0; i < ganjilCount; ++i) {
+        cout << " " << ganjil[i];
     }
 
     return 0;
 }
 ```
 #### Output:
-![Screenshot (529)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/d0f36238-8e9b-4060-ab79-6390decc798d)
 
-Code di atas adalah sebuah program C++ sederhana yang menghitung keliling persegi dan volume kubus berdasarkan pilihan menu yang dimasukkan oleh pengguna. Program ini memiliki fungsi hitungKelilingPersegi untuk menghitung keliling persegi dan fungsi hitungVolumeKubus untuk menghitung volume kubus. Program ini terlebih dahulu akan menampilkan menu pilihan kepada pengguna untuk memilih apakah ingin menghitung keliling persegi atau volume kubus. Setelah pengguna memasukkan pilihan menu, program akan meminta input yang sesuai dan kemudian melakukan perhitungan berdasarkan pilihan pengguna. Jika pengguna memilih untuk menghitung keliling persegi, program akan meminta input panjang sisi persegi, kemudian menghitung dan menampilkan keliling persegi. Sedangkan jika pengguna memilih untuk menghitung volume kubus, program akan meminta input sisi kubus, kemudian menghitung dan menampilkan volume kubus. Jika pengguna memasukkan pilihan menu yang tidak valid, program akan menampilkan pesan "Menu Tidak Ada". Pada kode di atas, menggunakan cout untuk mencetak atau menampilkan output ke layar. 
+![Screenshot (569)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/b0e38ca8-7154-45b3-b6a7-520400f409d9)
 
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
+Code di atas merupakan program sederhana dalam bahasa C++ yang meminta pengguna untuk memasukkan data array. Program akan terus menerima input angka hingga pengguna menekan tombol Enter. Setelah semua data dimasukkan, program akan memisahkan angka genap dan ganjil dari data array tersebut. Kemudian, program akan menampilkan data array yang dimasukkan oleh pengguna, diikuti dengan angka genap dan angka ganjil yang dipisahkan. Program ini menggunakan array untuk menyimpan data array, angka genap, dan angka ganjil. Selain itu, program juga menggunakan variabel untuk menghitung jumlah data yang dimasukkan dan jumlah angka genap serta ganjil.
 
-#### Class
-Class adalah blueprint (cetak biru) untuk membuat objek. Class mendukung konsep enkapsulasi, di mana anggota-anggota data (variabel) dan fungsi-fungsi yang berkaitan dapat disembunyikan atau diakses secara terbatas. Class menentukan apa yang dimiliki sebuah objek (atribut) dan apa yang dapat dilakukan objek (metode). Umumnya kelas mewakili sebuah kata benda yang dapat merupakan seseorang, hewan, buah, ataupun benda mati.
+Program ini dapat membantu pengguna untuk memahami cara memisahkan angka genap dan ganjil dari sebuah data array yang dimasukkan. Dengan menggunakan loop while dan kondisi cin.peek() != '\n', program akan terus menerima input angka hingga pengguna menekan tombol Enter. Setelah semua data dimasukkan, program akan menampilkan data array beserta angka genap dan ganjil yang dipisahkan. Dengan demikian, pengguna dapat dengan mudah melihat pemisahan angka genap dan ganjil dari data array yang dimasukkan.
 
-#### Struct
-Struct dalam bahasa C++ merupakan struktur data yang memungkinkan terjadinya pembentukan tipe data baru dengan menggabungkan berbagai macam variabel dengan tipe data berbeda yang tersedia dalam C++. Tipe data yang baru, dapat dibentuk di luar tipe data yang sudah ada dengan menggabungkan beberapa tipe data tersebut sesuai dengan kebutuhan program atau aplikasi yang dirancang [2].
-
-#### Perbedaan keduanya
-Perbedaan utama antara class dan struct dalam bahasa C++ adalah hak akses default untuk anggota-anggotanya. Secara default, anggota struct adalah public, sedangkan anggota class adalah private. Class lebih banyak digunakan untuk objek yang dimana setiap proses di dalamnya saling berhubungan. Sedangkan struct biasa digunakan untuk struktur data atau objek yang sebenarnya, menyimpan data menggunakan variabel dan membuat fungsi [4].
-
-Dengan demikian, penggunaan class lebih cocok untuk mendefinisikan tipe data baru dengan operasi-operasi yang terkait dan untuk mengimplementasikan konsep enkapsulasi, sedangkan struct lebih sering digunakan untuk menyimpan data terkait yang sederhana dan tidak memerlukan operasi kelas yang rumit. 
-
-#### Contoh program
+### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
 ```c++
 #include <iostream>
 using namespace std;
 
-// Definisi struct untuk Mahasiswa
-struct MahasiswaStruct {
-    string nama;
-    int umur;
-    float ipk;
-};
+int main() 
+{
+    int x, y, z;
+    cout << "Masukkan jumlah baris: ";
+    cin >> x;
+    cout << "Masukkan jumlah kolom: ";
+    cin >> y;
+    cout << "Masukkan jumlah layer: ";
+    cin >> z;
 
-// Definisi class untuk Mahasiswa
-class MahasiswaClass {
-private:
-    string nama;
-    int umur;
-    float ipk;
+    int arr[x][y][z];
 
-public:
-    // Constructor untuk inisialisasi data mahasiswa
-    MahasiswaClass(string _nama, int _umur, float _ipk) {
-        nama = _nama;
-        umur = _umur;
-        ipk = _ipk;
+    for (int a = 0; a < x; a++) 
+    {
+        for (int b = 0; b < y; b++) 
+        {
+            for (int c = 0; c < z; c++) 
+            {
+                cout << "Input array[" << a << "][" << b << "][" << c << "] = ";
+                cin >> arr[a][b][c];
+            }
+        }
+        cout << endl;
     }
 
-    // Metode untuk menampilkan informasi mahasiswa
-    void display() {
-        cout << "Nama: " << nama << endl;
-        cout << "Umur: " << umur << endl;
-        cout << "IPK: " << ipk << endl;
+    for (int a = 0; a < x; a++)
+    {
+        for (int b = 0; b < y; b++)
+        {
+            for (int c = 0; c < z; c++)
+            {
+                cout << "Data Array[" << a << "][" << b << "][" << c << "] = " << arr[a][b][c] << endl;
+            }
+        }
     }
-};
+    cout << endl;
 
-int main() {
-    // Menggunakan struct MahasiswaStruct
-    MahasiswaStruct mhsStruct;
-    mhsStruct.nama = "Budi";
-    mhsStruct.umur = 20;
-    mhsStruct.ipk = 3.75;
-
-    cout << "=== Mahasiswa menggunakan Struct ===" << endl;
-    cout << "Nama: " << mhsStruct.nama << endl;
-    cout << "Umur: " << mhsStruct.umur << endl;
-    cout << "IPK: " << mhsStruct.ipk << endl << endl;
-
-    // Menggunakan class MahasiswaClass
-    MahasiswaClass mhsClass("Budi", 20, 3.75);
-
-    cout << "=== Mahasiswa menggunakan Class ===" << endl;
-    mhsClass.display();
+    for (int a = 0; a < x; a++)
+    {
+        for (int b = 0; b < y; b++)
+        {
+            for(int c = 0; c < z; c++)
+            {
+                cout << arr[a][b][c] << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
 
     return 0;
 }
 ```
 #### output
 
-![Screenshot (530)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/18028eb2-ad3f-4417-a4aa-2744550c12ce)
+![Screenshot (565)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/47f56684-6dc6-4b92-b489-f3a1bd257172) <br>
 
-Code di atas merupakan program C++ yang menunjukkan perbedaan antara penggunaan struct dan class dalam pemrograman. Program ini mendefinisikan sebuah struct MahasiswaStruct dan sebuah class MahasiswaClass yang memiliki properti nama, umur, dan IPK (Indeks Prestasi Kumulatif). Pertama, program menggunakan struct MahasiswaStruct untuk membuat objek mhsStruct yang merepresentasikan seorang mahasiswa. Kemudian, program menginisialisasi nilai nama, umur, dan IPK dari objek tersebut. Selanjutnya, program menampilkan informasi mahasiswa tersebut menggunakan nilai yang disimpan dalam objek struct. Kemudian, program menggunakan class MahasiswaClass untuk membuat objek mhsClass yang juga merepresentasikan seorang mahasiswa. Class MahasiswaClass memiliki properti nama, umur, dan IPK sebagai variabel private, serta memiliki constructor untuk menginisialisasi nilai-nilai tersebut. Terdapat juga metode display() yang digunakan untuk menampilkan informasi mahasiswa. Setelah objek mhsClass dibuat dan diinisialisasi dengan nilai tertentu, program menampilkan informasi mahasiswa tersebut dengan memanggil metode display() dari objek mhsClass. Pada kode di atas, menggunakan cout untuk mencetak atau menampilkan output ke layar. 
+![Screenshot (566)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/8253c701-73de-44a6-94cc-b7ec64fb434f)
 
-Dengan demikian, program ini memperlihatkan perbedaan antara penggunaan struct dan class dalam pemrograman C++, di mana struct digunakan untuk menyimpan data tanpa metode atau fungsi tambahan, sedangkan class digunakan untuk menyimpan data beserta metode atau fungsi yang terkait dengan data tersebut.
+Hasil output program tersebut menunjukkan proses penginputan dan penampilan data dari array tiga dimensi yang telah diisi oleh pengguna. Pengguna diminta untuk memasukkan jumlah baris, kolom, dan layer array, kemudian memasukkan nilai-nilai elemen array sesuai dengan indeksnya. Setelah semua nilai diinputkan, program menampilkan data array dengan format "Data Array[i][j][k] = nilai" yang mencakup semua nilai yang telah dimasukkan sebelumnya.
 
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+Selain itu, program juga menampilkan seluruh elemen array dalam format matriks tiga dimensi, di mana setiap baris mewakili satu layer dari array tiga dimensi. Dengan demikian, pengguna dapat melihat dengan jelas struktur dan nilai-nilai dari array tiga dimensi yang telah diinputkan. Dari output tersebut, dapat terlihat bahwa nilai-nilai yang dimasukkan oleh pengguna berhasil disimpan dan ditampilkan dengan benar sesuai dengan indeksnya dalam array tiga dimensi.
+
+### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata–rata dari suatu array dengan input yang dimasukan oleh user!
 
 ```c++
 #include <iostream>
-#include <map>
+
+double hitungMaksimum(int arr[], int n) {
+    int maksimum = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > maksimum) {
+            maksimum = arr[i];
+        }
+    }
+    return maksimum;
+}
+
+double hitungMinimum(int arr[], int n) {
+    int minimum = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < minimum) {
+            minimum = arr[i];
+        }
+    }
+    return minimum;
+}
+
+double hitungRataRata(int arr[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+    return static_cast<double>(sum) / n;
+}
 
 int main() {
-    // Mendefinisikan map untuk menyimpan data mahasiswa (nama dan nilai)
-    std::map<std::string, int> nilaiMahasiswa;
+    int n;
+    std::cout << "Masukkan jumlah elemen dalam array: ";
+    std::cin >> n;
 
-    // Memasukkan data mahasiswa ke dalam map
-    nilaiMahasiswa["Alice"] = 85;
-    nilaiMahasiswa["Bob"] = 70;
-    nilaiMahasiswa["Charlie"] = 92;
+    int arr[n];
 
-    // Menampilkan nilai mahasiswa
-    for (auto it = nilaiMahasiswa.begin(); it != nilaiMahasiswa.end(); ++it) {
-        std::cout << "Nilai " << it->first << ": " << it->second << std::endl;
+    for (int i = 0; i < n; i++) {
+        std::cout << "Masukkan elemen ke-" << i + 1 << ": ";
+        std::cin >> arr[i];
     }
+
+    int choice;
+    do {
+        std::cout << "Menu Pilihan:" << std::endl;
+        std::cout << "1. Hitung Maksimum" << std::endl;
+        std::cout << "2. Hitung Minimum" << std::endl;
+        std::cout << "3. Hitung Rata-rata" << std::endl;
+        std::cout << "4. Keluar" << std::endl;
+        std::cout << "Pilih menu (1/2/3/4): ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+                std::cout << "Nilai Maksimum: " << hitungMaksimum(arr, n) << std::endl;
+                break;
+            case 2:
+                std::cout << "Nilai Minimum: " << hitungMinimum(arr, n) << std::endl;
+                break;
+            case 3:
+                std::cout << "Nilai Rata-rata: " << hitungRataRata(arr, n) << std::endl;
+                break;
+            case 4:
+                std::cout << "Keluar dari program" << std::endl;
+                break;
+            default:
+                std::cout << "Pilihan tidak valid" << std::endl;
+        }
+    } while (choice != 4);
 
     return 0;
 }
 ```
 #### output
-![Screenshot (531)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/bd4c6e88-c332-4657-ae30-729572d69b9a)
-Code di atas merupakan program C++ yang menggunakan library map untuk menyimpan data mahasiswa berupa nama dan nilai. Program ini kemudian memasukkan data mahasiswa ke dalam map nilaiMahasiswa dan menampilkan nilai mahasiswa tersebut ke layar. menggunakan function cout untuk mengeksekusi nya. berikut penjelasan lebih rincinya : 
-1. Mendefinisikan map nilaiMahasiswa yang menggunakan key berupa std::string (nama mahasiswa) dan value berupa int (nilai mahasiswa).
-2. Memasukkan data mahasiswa ke dalam map nilaiMahasiswa dengan key berupa nama mahasiswa dan value berupa nilai mahasiswa. Dalam contoh ini, data yang dimasukkan adalah:
-"Alice" dengan nilai 85, "Bob" dengan nilai 70, "Charlie" dengan nilai 92
-3. Melakukan iterasi melalui map nilaiMahasiswa menggunakan iterator it. Iterator it digunakan untuk mengakses elemen-elemen map, yang memiliki dua bagian: first (key) dan second (value). Program mencetak nama mahasiswa beserta nilainya ke layar menggunakan std::cout.
-4.  Mengakhiri program dengan mengembalikan nilai 0.
 
-#### Kesimpulan kode diatas
-Dengan menggunakan map, program dapat menyimpan data mahasiswa secara terstruktur dengan pasangan key-value. Kemudian, program menggunakan loop untuk menampilkan nilai mahasiswa yang disimpan dalam map ke layar. Dengan demikian, program ini memanfaatkan fitur map untuk menyimpan dan mengakses data mahasiswa dengan efisien.
+![Screenshot (570)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/6e5afeb6-c91f-443f-bdb2-9e2769b7ddfd)
 
-#### Perbedaan array dengan map
+Program tersebut adalah sebuah program C++ yang memungkinkan pengguna untuk menginputkan elemen-elemen ke dalam sebuah array, kemudian melakukan perhitungan nilai maksimum, minimum, dan rata-rata dari array tersebut. Program ini menggunakan tiga fungsi terpisah, yaitu hitungMaksimum, hitungMinimum, dan hitungRataRata, untuk melakukan perhitungan tersebut. Setelah pengguna memasukkan elemen-elemen array, program akan menampilkan menu pilihan yang berisi opsi untuk menghitung nilai maksimum, minimum, atau rata-rata, serta opsi untuk keluar dari program. Pengguna dapat memilih salah satu opsi tersebut dengan memasukkan angka yang sesuai, dan program akan menampilkan hasil perhitungan sesuai dengan pilihan pengguna. Program akan terus menampilkan menu pilihan sampai pengguna memilih opsi untuk keluar.
 
-Array adalah suatu struktur yang terdiri dari sejumlah elemen yang memiliki tipe data yang sama. Elemen-elemen array tersusun secara sekuensial dalam memori komputer. Semua elemem array bertipe sama [3]. Array merupakan kumpulan data yang diakses dengan berdasarkan indeks (mulai dari 0 sampai ukuran array-1). Ukuran array biasanya ditentukan saat deklarasi dan tidak dapat diubah saat program berjalan. Array cocok digunakan ketika kita memiliki data yang membutuhkan akses langsung berdasarkan indeksnya dan ukuran array tetap.
+Program ini menggunakan array statis di mana ukuran array ditentukan oleh input pengguna. Saat menggunakan array statis seperti ini, ukuran array harus diketahui pada saat kompilasi program. Jika ingin membuat program yang lebih fleksibel dengan ukuran array yang dapat diubah saat runtime, bisa menggunakan pendekatan dengan alokasi memori dinamis atau menggunakan struktur data seperti std::vector dalam C++.
 
-Sedangkan Map adalah struktur data yang digunakan untuk menyimpan pasangan kunci-nilai (key-value pairs), elemen-elemen dalam map tidak disimpan secara berurutan dalam memori, melainkan diurutkan berdasarkan kunci. Kunci dalam map harus unik, sedangkan nilai tidak harus unik. Ukuran map dapat berubah saat program berjalan dengan menambah atau menghapus elemen. Map cocok digunakan ketika kita memerlukan asosiasi antara kunci dan nilai, serta ketika kita perlu mencari nilai berdasarkan kunci dengan efisien.
-
-Jadi, pemilihan antara keduanya tergantung pada kebutuhan program dan cara data akan diakses dan disimpan. Jika membutuhkan koleksi data yang sederhana dan ukurannya tetap, maka gunakan array. Namun, jika perlu memetakan kunci ke nilai dan mengelola data secara dinamis, maka gunakan map
+Dalam contoh yang diberikan, array yang dimasukkan terdiri dari 5 elemen yaitu {6, 7, 8, 9, 4}. Setelah melakukan perhitungan, program menemukan bahwa nilai maksimum dari array tersebut adalah 9, nilai minimumnya adalah 4, dan nilai rata-ratanya adalah 6.8. Hal ini berarti bahwa dari elemen-elemen yang dimasukkan, 9 adalah nilai terbesar, 4 adalah nilai terkecil, dan rata-rata dari semua elemen tersebut adalah 6.8. Dengan program ini, pengguna dapat dengan cepat mengetahui nilai maksimum, minimum, dan rata-rata dari sejumlah elemen yang dimasukkan. Hal ini sangat berguna dalam analisis data sederhana dan dapat membantu pengguna dalam mengambil keputusan berdasarkan statistik dasar dari data yang dimiliki.  
 
 ## Kesimpulan
-Kesimpulannya, tipe data memiliki tiga jenis yaitu tipe data primitif, tipe data abstrak, dan tipe data koleksi. Tipe data primitif meliputi integer, float, character, dan boiolean. Tipe data abstrak meliputi struct dan class, struct memiliki askses default yang bersifat public sedangkan class bersifat private. Tipe data koleksi meliputi array, vector, dan map. Array adalah struktur data statis, berukuran tetap, berisi tipe data yang sama secara beruruta. Vector adalah struktur data dinamis, ukurannya dapat disesuaikan, dan alokasi memorinya dilakukan otomatis dan bersebelahan. Sedangkan Map adalah struktur data yang memetakan kunci (key) ke nilai (value), setiap kuncinya harus unik.
+Array atau dalam bahasa indonesia disebut larik, merupakan sebuah teknik pemrograman di mana array tersebut dianalogikan sebagai wadah untuk menyimpan data data yang berjumlah banyak dan memiliki tipe data yang sama[4]. Array merupakan struktur data yang digunakan untuk menyimpan sekumpulan nilai yang memiliki tipe data yang sama. Array memungkinkan kita untuk menyimpan data dalam urutan tertentu dan mengaksesnya dengan menggunakan indeks. Terdapat beberapa jenis array, di antaranya adalah array satu dimensi (1D array) yang merupakan kumpulan nilai dalam satu baris, array dua dimensi (2D array) yang merupakan matriks dengan baris dan kolom, array multidimensi yang memiliki lebih dari dua dimensi. Array sangat berguna dalam pemrograman karena memungkinkan kita untuk menyimpan dan mengelola data secara efisien, array empat dimensi merupakan struktur data yang memungkinkan penyimpanan data dalam empat level, sedangkan array lima dimensi memungkinkan penyimpanan data dalam lima level. array empat dimensi dan lima dimensi digunakan untuk kasus-kasus di mana data perlu disusun dalam struktur yang lebih kompleks dan memiliki banyak dimensi[5].
 
 ## Referensi
-[1] S. Hanief and I. Jepriana, "Konsep Algoritme dan Aplikasinya dalam Bahasa Pemrograman C++," Yogyakarta, Indonesia: Penerbit Andi, 2020.
-[2] Dwi Putra, Muhammad T., et al. BELAJAR PEMROGRAMAN LANJUT DENGAN C++. Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA, 2023.
-[3] M. A. Pratama, "STRUKTUR DATA ARRAY DUA DIMENSI PADA PEMROGRAMAN C++," 2020. Available: osf.io/vyech.
-[4] A. Aristo, “Swift: Class vs. Struct - Dipantry - Medium,” Medium, Dec. 28, 2021. [Online]. Available: https://medium.com/dipantry/swift-class-vs-struct-c0b279b1dfaf.
+[1] Putri, M. P. (Ed.). Algoritma dan Struktur Data. CV WIDINA MEDIA UTAMA, 2022. <br>
+[2] R. Firliana and P. Kasih, Adjie Media Nusantara, "Algoritma dan Pemrograman C++," 2018. <br>
+[3] Efendi, Yasin. Buku Ajar Pendidikan Algoritma dan Struktur Data. Eureka Media Aksara, 2022. <br>
+[4] Putra, Muhammad Taufik D., et al. BELAJAR DASAR PEMROGRAMAN DENGAN C++. Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA, 2022. <br>
+[5] J. Smith, "Exploring High-Dimensional Arrays for Big Data Processing," Journal of Big Data Analytics, vol. 3, no. 1, pp. 45-55, 2018.
