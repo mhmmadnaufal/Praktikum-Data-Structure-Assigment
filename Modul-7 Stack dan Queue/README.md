@@ -301,6 +301,10 @@ int main() {
         cout << "Kalimat tersebut bukan palindrom." << endl;
     }
 
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "By: Muhammad Naufal (2311110034)" << endl;
+
     return 0;
 }
 ```
@@ -438,6 +442,11 @@ int main() {
     } while (choice != 6);
 
     delete[] queuePasien; // Dealokasi memori yang dialokasikan sebelumnya
+
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "By: Muhammad Naufal (2311110034)" << endl;
+
     return 0;
 }
 ```
