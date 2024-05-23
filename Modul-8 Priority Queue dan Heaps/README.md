@@ -162,7 +162,13 @@ int main() {
 
 ![Screenshot (787)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/8ac837ee-3e95-4d75-af43-6360824cea80)
 
+#### Interpretasi codingan
+
 Codingan di atas merupakan implementasi dari algoritma Priority Queue menggunakan struktur data heap dalam bahasa pemrograman C++. Algoritma ini memungkinkan penambahan elemen dengan prioritas tertinggi, penghapusan elemen dengan prioritas tertinggi, perubahan prioritas elemen, serta penghapusan elemen tertentu. Fungsi insert(int p) digunakan untuk menambahkan elemen dengan prioritas p ke dalam priority queue, sementara fungsi extractMax() akan mengeluarkan elemen dengan prioritas tertinggi dari priority queue. Fungsi changePriority(int i, int p) memungkinkan pengguna untuk mengubah prioritas elemen pada indeks i menjadi p dan menyesuaikan posisinya di dalam priority queue, sedangkan fungsi remove(int i) berperan dalam menghapus elemen pada indeks i dari priority queue. Program tersebut melakukan serangkaian operasi pada priority queue yang telah diinisialisasi dengan beberapa elemen. Setelah setiap operasi, program mencetak isi priority queue untuk memperlihatkan perubahan yang terjadi setelah operasi tersebut dilakukan. Jadi, implementasi ini memungkinkan pengguna untuk mengelola data dengan prioritas tertinggi secara efisien menggunakan struktur data heap.
+
+#### Interpretasi Output
+
+Program diatas mengelola sebuah priority queue menggunakan heap. Pada awalnya, priority queue berisi elemen-elemen: 45, 31, 14, 13, 20, 7, 11, 12, 7. Elemen dengan prioritas tertinggi (45) diidentifikasi dan kemudian diekstrak, mengubah priority queue menjadi: 31, 20, 14, 13, 7, 7, 11, 12. Selanjutnya, setelah terjadi perubahan prioritas, priority queue berubah menjadi: 49, 20, 31, 13, 7, 7, 11, 12. Setelah elemen dengan prioritas tertinggi (49) dihapus, priority queue akhirnya menjadi: 49, 20, 31, 13, 7, 7, 11, 12, dan setelah perubahan prioritas berikutnya menjadi: 49, 20, 31, 13, 7, 7, 11, 12.
 
 
 ## Unguided 
@@ -300,9 +306,15 @@ int main() {
 
 ![Screenshot (769)](https://github.com/mhmmadnaufal/Praktikum-Data-Structure-Assigment/assets/153933119/91a7dd95-da07-4867-85f0-a0aa9df99d1f)
 
-Codingan di atas merupakan implementasi dari algoritma Priority Queue menggunakan struktur data heap dalam bahasa pemrograman C++. Program ini memberikan pengguna kemampuan untuk melakukan berbagai operasi pada priority queue, termasuk penambahan elemen, pengambilan elemen dengan prioritas tertinggi, perubahan prioritas elemen, dan penghapusan elemen tertentu. Fungsi-fungsi seperti parent(int i), leftChild(int i), dan rightChild(int i) digunakan untuk mengakses parent dan child dari suatu node dalam heap, sedangkan shiftUp(int i) dan shiftDown(int i) digunakan untuk memindahkan elemen ke atas atau ke bawah heap sesuai aturan heap.
+#### Interpretasi codingan 
 
-Berbagai operasi yang dapat dilakukan pada priority queue meliputi penambahan elemen dengan insert(int p), pengambilan elemen tertinggi dengan extractMax(), perubahan prioritas elemen dengan changePriority(int i, int p), dan penghapusan elemen dengan remove(int i). Setelah inisialisasi priority queue dengan sejumlah elemen, program mencetak isi priority queue dan melakukan operasi-operasi tersebut berdasarkan input pengguna. Setiap operasi diikuti dengan pencetakan isi priority queue untuk memperlihatkan perubahan yang terjadi setelah operasi dilakukan. Dengan demikian, program ini memberikan fleksibilitas kepada pengguna dalam mengelola data dengan prioritas tertinggi menggunakan struktur data heap.
+Program C++ diatas mengimplementasikan struktur data priority queue menggunakan heap. Heap diimplementasikan sebagai array `H` dengan ukuran maksimum 50 elemen, dan variabel `heapSize' melacak ukuran heap. Fungsi `parent`, `leftChild`, dan `rightChild` digunakan untuk menghitung indeks orang tua dan anak dari elemen dalam heap. Fungsi `shiftUp` dan `shiftDown` mengatur elemen dalam heap untuk mempertahankan properti heap, di mana `shiftUp` mempromosikan elemen ke posisi yang lebih tinggi jika prioritasnya lebih tinggi dari orang tuanya, sedangkan `shiftDown` menurunkan elemen jika anaknya memiliki prioritas yang lebih tinggi. Fungsi `insert` menambahkan elemen baru ke dalam heap, `extractMax` menghapus dan mengembalikan elemen dengan prioritas tertinggi, `changePriority` mengubah prioritas elemen pada indeks tertentu dan menyesuaikan posisinya, `getMax` mengembalikan elemen dengan prioritas tertinggi tanpa menghapusnya, dan `remove` menghapus elemen pada indeks tertentu.
+
+Di dalam fungsi `main`, program meminta pengguna untuk memasukkan sejumlah elemen yang akan dimasukkan ke dalam priority queue dan menambahkannya satu per satu menggunakan fungsi `insert`. Setelah menampilkan isi priority queue, program mengekstrak elemen dengan prioritas tertinggi menggunakan `extractMax` dan menampilkan isi heap setelah operasi tersebut. Program kemudian meminta pengguna untuk mengubah prioritas elemen pada indeks tertentu dan menyesuaikan heap menggunakan `changePriority`. Selanjutnya, program meminta pengguna untuk menghapus elemen pada indeks tertentu dan menyesuaikan heap menggunakan `remove`. Akhirnya, program menampilkan isi priority queue setelah setiap operasi untuk menunjukkan perubahan yang terjadi.
+
+#### Interpretasi Output
+
+Program diatas berinteraksi dengan pengguna untuk membangun dan memanipulasi sebuah priority queue. Awalnya, pengguna diminta untuk memasukkan elemen yang ingin diinputkan, disini penggunak menginputkan lima elemen yang terdiri dari : 8, 6, 9, 11, dan 15, yang kemudian membentuk priority queue: 15, 11, 9, 8, 6. Elemen dengan prioritas tertinggi (15) diidentifikasi dan diekstrak, meninggalkan queue: 11, 9, 8, 6. Pengguna kemudian mengubah prioritas elemen pada indeks 1 (nilai 11) menjadi 20, mengubah queue menjadi: 20, 11, 8, 6. Selanjutnya, pengguna menghapus elemen pada indeks 2 (nilai 8), menghasilkan queue akhir: 20, 11, 6. Program ini menunjukkan operasi dasar pada priority queue seperti penambahan elemen, pengambilan elemen dengan prioritas tertinggi, perubahan prioritas, dan penghapusan elemen.
 
 
 ## Kesimpulan
